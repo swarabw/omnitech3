@@ -1,0 +1,110 @@
+.hero-banner {
+  background: linear-gradient(120deg, #0d3a63, #1b5685);
+  color: white;
+  padding: 100px 40px;
+  text-align: center;
+  animation: fadeIn 1.3s ease;
+  border-radius: 20px;
+  margin: 40px 30px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.explore-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background: #ffcc00;
+  border: none;
+  border-radius: 8px;
+  color: #0d3a63;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #e6b800;
+  transform: scale(1.05);
+}
+
+/* Nav links style */
+.menu-item {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.menu-item:hover {
+  color: #ffcc00;
+}
+
+/* Nav container */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: #0d3a63;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Nav links container */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Search bar styling (optional placeholder) */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 📱 Mobile Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .explore-btn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}

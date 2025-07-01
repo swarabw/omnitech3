@@ -1,0 +1,311 @@
+/* ========== Base Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  color: #132c44;
+  background:
+    linear-gradient(to bottom right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.85)),
+    url('https://w0.peakpx.com/wallpaper/225/109/HD-wallpaper-gray-background-with-blue-circle-circle-background-blue-lines-circle-background-creative-circles-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* 🎈 Floating Bubbles Background */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+body::before {
+  width: 320px;
+  height: 320px;
+  top: -100px;
+  left: -100px;
+  background: radial-gradient(circle, rgba(13, 58, 99, 0.15), transparent);
+  animation: float 8s ease-in-out infinite;
+}
+
+body::after {
+  width: 450px;
+  height: 450px;
+  bottom: -150px;
+  right: -150px;
+  background: radial-gradient(circle, rgba(13, 58, 99, 0.15), transparent);
+  animation: float 10s ease-in-out infinite;
+}
+
+/* ========== Header Styling ========== */
+header {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.top-bar {
+  background: #b7cde3;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  color: #0d3a63;
+  font-weight: 500;
+  animation: slideDown 1s ease-in-out;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
+  margin: 25px 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  animation: sliceIn 1.3s ease;
+  position: relative;
+}
+
+.main-header + .tagline {
+  position: absolute;
+  bottom: -28px;
+  left: 32px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #223d56;
+  background: #d6e4f3;
+  padding: 8px 18px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 1.5s ease 0.5s backwards;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  animation: bounceIn 1.2s ease;
+}
+
+.logo-area img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+}
+
+.logo-text {
+  margin-left: 16px;
+}
+
+.logo-text h1 {
+  color: #0d3a63;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.logo-text p {
+  font-size: 16px;
+  color: #375975;
+  margin-top: 4px;
+}
+
+/* ========== Middle Header Tools ========== */
+.middle-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+.search-container {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  background: white;
+  animation: fadeInRight 1.2s ease;
+}
+
+.search-container input {
+  padding: 10px 14px;
+  border: none;
+  outline: none;
+}
+
+.search-container button {
+  padding: 10px 18px;
+  background: linear-gradient(to right, #145ea8, #0d3a63);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.search-container button:hover {
+  background: linear-gradient(to right, #104e8b, #0a2c50);
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: fadeInLeft 1.2s ease;
+}
+
+.language-selector select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  font-weight: 500;
+  transition: border-color 0.3s ease;
+}
+
+.language-selector select:hover {
+  border-color: #145ea8;
+}
+
+.language-selector img {
+  width: 24px;
+  height: 16px;
+}
+
+/* ========== Navigation Bar ========== */
+nav {
+  background: #0d3a63;
+  display: flex;
+  align-items: center;
+  padding: 16px 30px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  animation: slideUp 1.2s ease;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  background-color: #145ea8;
+  padding: 10px 16px;
+  border-radius: 10px;
+  margin-right: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover {
+  background-color: #104e8b;
+  transform: scale(1.05);
+}
+
+.menu-item {
+  margin-right: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-item::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ffcc00;
+  transition: width 0.3s ease;
+}
+
+.menu-item:hover {
+  color: #ffcc00;
+  transform: scale(1.08);
+}
+
+.menu-item:hover::after {
+  width: 100%;
+}
+
+/* ========== Page Style ========== */
+.page {
+  padding: 50px 20px;
+  text-align: center;
+  color: #0a2a4a;
+}
+
+.page h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.page p {
+  font-size: 1.2rem;
+  color: #244b6c;
+}
+
+/* ========== Animations ========== */
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes sliceIn {
+  0% { clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); opacity: 0; }
+  100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); opacity: 1; }
+}
