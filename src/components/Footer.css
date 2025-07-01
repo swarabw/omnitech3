@@ -1,0 +1,222 @@
+/* src/components/Footer.css */
+
+:root {
+  --primary: #00aced;
+  --dark-bg: #0a1d3c;
+  --darker-bg: #112c56;
+  --glass-blur: rgba(255, 255, 255, 0.1);
+  --text-light: #ccc;
+  --text-bright: #fff;
+  --gradient-border: linear-gradient(45deg, #00aced, #1e90ff);
+}
+
+.footer {
+  background: linear-gradient(to right, var(--dark-bg), var(--darker-bg));
+  color: var(--text-bright);
+  padding: 60px 20px 30px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: auto;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+  min-width: 220px;
+  padding: 0 15px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 5px;
+  font-size: 20px;
+  border-image-slice: 1;
+  border-image-source: var(--gradient-border);
+  animation: gradientBorder 5s infinite alternate;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 10px 0;
+}
+
+.footer-column ul li a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: var(--primary);
+}
+
+.social-icons a {
+  color: var(--text-bright);
+  font-size: 20px;
+  margin-right: 12px;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: var(--primary);
+}
+
+.subscribe-form {
+  margin-top: 20px;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 10px;
+  width: 70%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.subscribe-form button {
+  padding: 10px 15px;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background-color: #0084b4;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+
+#backToTop:hover {
+  background-color: #0084b4;
+}
+
+.whatsapp-launcher {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 999;
+}
+
+.chat-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.chat-icon:hover {
+  transform: scale(1.1);
+  background-color: #1ebe5d;
+}
+
+.chat-popup {
+  width: 250px;
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 75px;
+  left: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  display: none;
+  flex-direction: column;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.chat-header {
+  background-color: #25D366;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-body {
+  padding: 15px;
+  font-size: 14px;
+}
+
+.chat-now-btn {
+  background-color: #25D366;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.chat-now-btn:hover {
+  background-color: #1ebe5d;
+}
+
+@keyframes gradientBorder {
+  0% { border-image-source: linear-gradient(45deg, #00aced, #1e90ff); }
+  50% { border-image-source: linear-gradient(135deg, #1e90ff, #00aced); }
+  100% { border-image-source: linear-gradient(45deg, #00aced, #1e90ff); }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .subscribe-form input[type="email"],
+  .subscribe-form button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
