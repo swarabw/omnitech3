@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Global Reset */
 * {
   margin: 0;
@@ -19,4 +20,18 @@ body {
 /* Code Font */
 code {
   font-family: 'Courier New', source-code-pro, Menlo, Monaco, Consolas, monospace;
+=======
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+>>>>>>> 294f6918455954a3c3548be1d5c8902ec4fb5d14
 }
