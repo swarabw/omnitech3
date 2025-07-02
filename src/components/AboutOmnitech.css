@@ -1,0 +1,137 @@
+/* AboutOmnitech.css */
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 10px auto;
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.content-left {
+  flex: 1;
+  padding: 40px;
+  z-index: 2;
+}
+
+.content-left h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.content-left p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.content-left ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.content-left ul li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.content-left ul li::before {
+  content: "✔";
+  margin-right: 10px;
+  color: #00aaff;
+}
+
+.learn-btn {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #00aaff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.learn-btn:hover {
+  background-color: #0077cc;
+}
+
+.content-right {
+  flex: 1;
+  background: url('https://static.vecteezy.com/system/resources/previews/025/500/537/non_2x/industrial-cnc-laser-cutting-metal-with-sparks-small-depth-of-field-laser-cnc-machine-cutting-off-a-metal-plate-in-a-manufacturing-facility-with-sparks-flying-ai-generated-free-photo.jpg') no-repeat center center;
+  background-size: cover;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 1;
+}
+
+/* 📱 Responsive Fixes */
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .content-right {
+    clip-path: none;
+    height: 200px;
+    left: 0;
+    position: relative;
+    width: 100%;
+  }
+
+  .content-left {
+    padding: 20px;
+    z-index: 2;
+  }
+
+  .content-left h2 {
+    font-size: 1.6rem;
+  }
+
+  .content-left p,
+  .content-left ul li {
+    font-size: 0.95rem;
+  }
+}
+.about-omnitech {
+  margin-top: 0px;   /* ✅ Reduce from large value */
+  padding-top: 20px; /* Optional padding */
+}
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  max-width: 1400px; /* ✅ Correct line */
+  width: 90%;         /* ✅ Correct line */
+  margin: 60px auto 20px;
+}
+.about-left {
+  padding: 60px 60px; /* More horizontal space */
+}
+.about-right {
+  flex: 1.2; /* Make image section slightly wider */
+}
+
+

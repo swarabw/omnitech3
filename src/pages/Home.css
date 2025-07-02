@@ -1,0 +1,21 @@
+.home-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem 4%;
+  box-sizing: border-box;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .home-container {
+    padding: 3rem 6%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .home-container {
+    padding: 4rem 8%;
+  }
+}
